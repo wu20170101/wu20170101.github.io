@@ -59,6 +59,8 @@ ul.posts li {
 		var cgrade_val = document.getElementById("cgrade" + (i+1));
 		unit_total = unit_total + cunit_val.value;
 		grade_point_total = grade_point_total + (cgrade_val.value * cunit_val.value);
+		alert("cunit_val : " + cunit_val);
+		alert("cgrade_val : " + cgrade_val);
 	}
 	gpa = grade_point_total / unit_total;
 	alert(unit_total);
