@@ -81,6 +81,12 @@ ul.posts li {
 	alert(unit_total);
 	alert(grade_point_total);
 	alert(gpa)  
+
+	var cunit_total = document.getElementById("cunit_total");
+	var cgpa = document.getElementById("cgpi");
+        cunit_total.value = unit_total;
+        cgpa.value = gpa;
+
   }	
 </script>	
 	
@@ -145,12 +151,13 @@ ul.posts li {
             <td><input type="text" name="cunit" id="cunit10" value="4" /></td>
             <td><input type="text" name="cgrade" id="cgrade10" value="0" /></td>
           </tr>
-          <tr>
-                Total Units : <BR>
-                GPA : 
-          </tr>
         </table>
 
+        <p id="cresult">
+        Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> 
+        GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
+        </p>
+		
         <input type="submit" name="cgrade" onclick="calculate()" />
         </div>
 	
