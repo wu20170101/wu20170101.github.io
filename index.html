@@ -54,11 +54,25 @@ ul.posts li {
 	alert("456");
 	var unit_total = 0;  
 	var grade_point_total = 0;  
-	for(i=0; i<2; ++i) {
+	for(i=0; i<50; ++i) {
 		var cunit  = document.getElementById("cunit" + (i+1));
 		var cgrade = document.getElementById("cgrade" + (i+1));
+		
+		if(!cunit) {
+			alert("break at" + i);
+			break;
+		}
+			
 		cunit_val = parseInt(cunit.value);
+		if(cunit_val < 0 || cunit_val > 4) {
+			continue;
+		}        			
+		
 		cgrade_val = parseInt(cgrade.value);
+		if(cgrade_val < 0 || cgrade_val > 4) {
+			continue;
+		}        			
+		
 		unit_total = unit_total + cunit_val;
 		grade_point_total = grade_point_total + (cgrade_val * cunit_val);
 	}
