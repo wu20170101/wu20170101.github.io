@@ -55,12 +55,14 @@ ul.posts li {
 	var unit_total = 0;  
 	var grade_point_total = 0;  
 	for(i=0; i<2; ++i) {
-		var cunit_val = document.getElementById("cunit" + (i+1));
-		var cgrade_val = document.getElementById("cgrade" + (i+1));
+		var cunit  = document.getElementById("cunit" + (i+1));
+		var cgrade = document.getElementById("cgrade" + (i+1));
+		cunit_val = parseInt(cunit);
+		cgrade_val = parseInt(cgrade);
 		unit_total = unit_total + cunit_val.value;
 		grade_point_total = grade_point_total + (cgrade_val.value * cunit_val.value);
-		alert("cunit_val : " + cunit_val);
-		alert("cgrade_val : " + cgrade_val);
+		alert("cunit_val : " + cunit_val.value);
+		alert("cgrade_val : " + cgrade_val.value);
 	}
 	gpa = grade_point_total / unit_total;
 	alert(unit_total);
