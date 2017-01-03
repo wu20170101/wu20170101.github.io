@@ -64,13 +64,13 @@ ul.posts li {
 		}
 			
 		cunit_val = parseInt(cunit.value);
-		if(!cunit_val ||cunit_val < 0 || cunit_val > 4) {
+		if(isNaN(cunit_val) ||cunit_val <= 0 || cunit_val > 4) {
 			alert("invlid at" + i);
 			continue;
 		}        			
 		
 		cgrade_val = parseInt(cgrade.value);
-		if(!cgrade_val || cgrade_val < 0 || cgrade_val > 4) {
+		if(isNaN(cunit_val) || cgrade_val < 0 || cgrade_val > 4) {
 			alert("invalid at" + i);
 			continue;
 		}        			
@@ -146,7 +146,12 @@ ul.posts li {
             <td><input type="text" name="cunit" id="cunit10" value="0" /></td>
             <td><input type="text" name="cgrade" id="cgrade10" value="0" /></td>
           </tr>
+          <tr>
+                Total Units : <BR>
+                GPA : 
+          </tr>
         </table>
+
         <input type="submit" name="cgrade" onclick="calculate()" />
         </div>
 	
