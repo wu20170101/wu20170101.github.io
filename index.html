@@ -57,8 +57,8 @@ ul.posts li {
 	for(i=0; i<2; ++i) {
 		var cunit  = document.getElementById("cunit" + (i+1));
 		var cgrade = document.getElementById("cgrade" + (i+1));
-		cunit_val = parseInt(cunit);
-		cgrade_val = parseInt(cgrade);
+		cunit_val = parseInt(cunit.value);
+		cgrade_val = parseInt(cgrade.value);
 		unit_total = unit_total + cunit_val;
 		grade_point_total = grade_point_total + (cgrade_val * cunit_val);
 	}
