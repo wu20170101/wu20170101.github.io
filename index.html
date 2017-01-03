@@ -63,13 +63,13 @@ ul.posts li {
 			break;
 		}
 			
-		cunit_val = parseInt(cunit.value);
+		cunit_val = parseFloat(cunit.value);
 		if(isNaN(cunit_val) ||cunit_val <= 0 || cunit_val > 4) {
 			// alert("invlid at" + i);
 			continue;
 		}        			
 		
-		cgrade_val = parseInt(cgrade.value);
+		cgrade_val = parseFloat(cgrade.value);
 		if(isNaN(cunit_val) || cgrade_val < 0 || cgrade_val > 4) {
 			// alert("invalid at" + i);
 			continue;
