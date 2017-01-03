@@ -64,12 +64,14 @@ ul.posts li {
 		}
 			
 		cunit_val = parseInt(cunit.value);
-		if(cunit_val < 0 || cunit_val > 4) {
+		if(!cunit_val ||cunit_val < 0 || cunit_val > 4) {
+			alert("invlid at" + i);
 			continue;
 		}        			
 		
 		cgrade_val = parseInt(cgrade.value);
-		if(cgrade_val < 0 || cgrade_val > 4) {
+		if(!cgrade_val || cgrade_val < 0 || cgrade_val > 4) {
+			alert("invalid at" + i);
 			continue;
 		}        			
 		
