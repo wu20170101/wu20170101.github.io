@@ -7,6 +7,7 @@ body {
     background-color : white;
     width: 70%;
 }
+<!--
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -37,7 +38,7 @@ footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
-
+	
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
@@ -46,51 +47,18 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+-->	
+
+div.section_header {
+	background-color:#4CAF50;
+	color:white;
+}	
 	
 </style>
 
 <script type="text/javascript">
-  function calculate( ) {
-	var unit_total = 0.0;  
-	var grade_point_total = 0.0;  
-	for(i=0; i<50; ++i) {
-		var cunit  = document.getElementById("cunit" + (i+1));
-		var cgrade = document.getElementById("cgrade" + (i+1));
-		
-		if(!cunit) {
-			// alert("break at" + i);
-			break;
-		}
-			
-		cunit_val = parseFloat(cunit.value);
-		if(isNaN(cunit_val) ||cunit_val <= 0 || cunit_val > 4) {
-			// alert("invlid at" + i);
-			continue;
-		}        			
-		
-		cgrade_val = parseFloat(cgrade.value);
-		if(isNaN(cgrade_val) || cgrade_val < 0 || cgrade_val > 4) {
-			// alert("invalid at" + i);
-			continue;
-		}        			
-		
-		unit_total = unit_total + cunit_val;
-		grade_point_total = grade_point_total + (cgrade_val * cunit_val);
-	}
-	gpa = grade_point_total / unit_total;
-	// alert(unit_total);
-	// alert(grade_point_total);
-	// alert(gpa)  
-
-	var cunit_total = document.getElementById("cunit_total");
-	var cgpa = document.getElementById("cgpi");
-        cunit_total.value = unit_total;
-        cgpa.value = gpa;
-
-  }	
-
 	
-  function calculate1( ) {
+  function calculate( ) {
 	var unit_total = 0.0;  
 	var grade_point_total = 0.0;  
 
@@ -146,7 +114,7 @@ ul.posts li {
 </head>
 <body >
 	<!--<form id="f1" > -->
-	<div style="background-color:#4CAF50;">&nbsp Semester 1 </div>
+	<div class="section_header">&nbsp Semester 1 </div>
 	<div>
 	<table style="width:70%" id="smstr1">
           <tr>
@@ -240,7 +208,7 @@ ul.posts li {
         GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
         </p>
 		
-        <input type="submit" name="cgrade" onclick="calculate1()" />
+        <input type="submit" name="cgrade" onclick="calculate()" />
         </div>
 	<!-- </form> -->
 </body>
