@@ -4,7 +4,7 @@
 <style>
 body {
     margin: 20px auto;
-    background-color : lightgray;
+    background-color : white
     width: 70%;
 }
 nav ul, footer ul {
@@ -126,7 +126,7 @@ ul.posts li {
 		unit_total = unit_total + cunit_val;
 		grade_point_total = grade_point_total + (cgrade_val * cunit_val);
         }	  
-
+	gpa = grade_point_total / unit_total;
 	var cunit_total = document.getElementById("cunit_total");
 	var cgpa = document.getElementById("cgpi");
         cunit_total.value = unit_total;
