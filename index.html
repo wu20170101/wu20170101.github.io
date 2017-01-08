@@ -88,6 +88,17 @@ ul.posts li {
         cgpa.value = gpa;
 
   }	
+
+	
+  function calculate1( ) {
+	var unit_total = 0.0;  
+	var grade_point_total = 0.0;  
+
+	var cgrades = document.getElementsByTagName("select");
+	alert(cgrades);
+  }	
+	
+	
 	
   function pageLoaded() {
 	// alert(window.location.search);	  
@@ -129,7 +140,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade2">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -152,7 +163,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade3">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -175,7 +186,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade4">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -198,7 +209,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade5">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -221,7 +232,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade6">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -244,7 +255,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade7">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -267,7 +278,7 @@ ul.posts li {
             <td><input type="text" name="cname" id="cname1" size="40" /></td>
             <td>Unit :  <input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
             <td>Grade : 
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade8">
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
   		<option value="3.3">B+</option>
@@ -294,7 +305,7 @@ ul.posts li {
         GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
         </p>
 		
-        <input type="submit" name="cgrade" onclick="calculate()" />
+        <input type="submit" name="cgrade" onclick="calculate1()" />
         </div>
 	</form>
 </body>
