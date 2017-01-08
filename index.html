@@ -98,11 +98,25 @@ ul.posts li {
 	alert(cgrades);
 	alert("length =" + cgrades.length);
         for(var i=0; i < cgrades.length; i++) {
-		var cgrade_val = cgrades[i].value;
-		alert("cgrade_val =" + cgrade_val)
+		var cgrade_val = parseFloat(cgrades[i].value);
+		var cgrade_id  = cgrades[i].id
+		alert("id=" + id);
+//		if(isNaN(cunit_val)) {
+//			alert("invlid at" + i);
+//			continue;
+//		}        			
+//		unit_total = unit_total + cunit_val;
+//		grade_point_total = grade_point_total + (cgrade_val * cunit_val);
+		
+		// alert("cgrade_val =" + cgrade_val)
 		// var cgrade_val = k.value; 		
 		// alert(cgrade_val) 
         }	  
+
+	var cunit_total = document.getElementById("cunit_total");
+	var cgpa = document.getElementById("cgpi");
+        cunit_total.value = unit_total;
+        cgpa.value = gpa;
   }	
 	
 	
