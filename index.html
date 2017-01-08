@@ -107,6 +107,9 @@ ul.posts li {
         cgpa.value = gpa;
   }	
 	
+  function addNewSemester() {
+	alert("Add");	  
+  }	  
 	
 	
   function pageLoaded() {
@@ -221,18 +224,18 @@ ul.posts li {
           </tr>
         </table>
 		
-<!--        <p id="cresult"> -->
+        <p id="cresult"> 
         Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> <BR>
         GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
-<!--        </p>
--->
+        </p>
+		
         </div>
         </div>		
 
 	</div>		
         <!-- <input type="submit" name="cgrade" onclick="calculate()" />-->
-        <button text="Calculate" onnclick="calculate()" />
-        <button text="Add New Semester" onclick="calculate()" />
+	<button text="Calculate" onnclick="calculate()" ></button>
+        <button text="Add New Semester" onclick="addNewSemester()" ></button>
 
 	<!-- </form> -->
 </body>
