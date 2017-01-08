@@ -97,8 +97,9 @@ ul.posts li {
 	var cgrades = document.getElementsByTagName("select");
 	alert(cgrades);
 	alert("length =" + cgrades.length);
-        for (var k in cgrades) {
-		alert("k=" + k)
+        for(var i=0; i < cgrades.length; i++) {
+		var cgrade_val = cgrades[i].value;
+		alert("k=" + cgrades[i])
 //		var cgrade_val = k.value; 		
 //		alert(cgrade_val) 
         }	  
