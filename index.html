@@ -109,6 +109,12 @@ ul.posts li {
 	
   function addNewSemester() {
 	alert("Add");	  
+	var div_main = document.getElementsByTagName("main_body");
+	var div_s1 = document.getElementsByTagName("div_smstr1"");
+        var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
+        clone.id = "div_smstr2";
+        div_main.body.appendChild(clone);						    
+
   }	  
 	
 	
