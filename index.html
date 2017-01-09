@@ -110,11 +110,11 @@ ul.posts li {
   function addNewSemester() {
 	alert("Add");	  
 	var div_main = document.getElementById("main_body");
-	var div_s1 = document.getElementById("div_smstr1");
+	var div_s1 = div_main.getElementById("div_smstr1");
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
 	  alert("clone = " + clone);
         clone.id = "div_smstr2";
-        div_s1.appendChild(clone);						    
+        div_main.appendChild(clone);						    
 
   }	  
 	
@@ -136,9 +136,8 @@ ul.posts li {
         
 	<div id="div_smstr1">
 
-<!--	<div class="section_header">&nbsp Semester 1 </div> -->
+        <div class="section_header">&nbsp Semester 1 </div> 
 	<div class="section_contents" >
-<!--		
 	<table style="width:70%" >
           <tr>
             <td><input type="text" name="cname" id="cname1" size="40" placeholder="Course, e.g. cs61a" /></td>
@@ -233,17 +232,18 @@ ul.posts li {
             </td>		    
           </tr>
         </table>
--->
-<!--        <p id="cresult"> 
-        Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> <BR>
-        GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
-        </p> -->
+
         </div>
 
 	</div>		
 
 	</div>		
 
+	<p id="cresult"> 
+        Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> <BR>
+        GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
+        </p> 
+		
         <input type="submit" name="cgrade" onclick="calculate()" />
 	<button text="Calculate" onnclick="calculate()" >Calculate</button>
         <button text="Add New Semester" onclick="addNewSemester()" >Add New Semester</button>
