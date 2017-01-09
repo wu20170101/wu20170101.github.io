@@ -128,13 +128,13 @@ ul.posts li {
   function getNewSemesterNumber() {
 	var smstr_count = document.getElementById("smstr_count");
         alert(smstr_count);
- 	if(!smstr_count) {
+ 	if(smstr_count) {
  		var smstr_count_val = parseInt(smstr_count);
                 alert(smstr_count_val);
-// 		if(!isNaN(smstr_count_val)) {
-// 			smstr_count.value = smstr_count_val++;
-// 			return smstr_count.value ;
-// 		}        			
+ 		if(!isNaN(smstr_count_val)) {
+ 			smstr_count.value = smstr_count_val++;
+ 			return smstr_count.value ;
+ 		}        			
  	}		
 	return 1;	  
   }	  
@@ -148,7 +148,7 @@ ul.posts li {
         if(cloned.id && cloned.id.endsWith("_s1")) {
 		// Update id of grade and unit fields  
            	cloned.id = cloned.id.replace("_s1", "_s" + semester);
-	        alert("updated = " + cloned.id);   
+	        // alert("updated = " + cloned.id);   
         }   
 	  
 	var children = cloned.children;
