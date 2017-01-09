@@ -67,10 +67,10 @@ ul.posts li {
   function calculate( ) {
 	var unit_total = 0.0;  
 	var grade_point_total = 0.0;  
-        alert("123");  
+        //alert("123");  
 	var cgrades = document.getElementsByTagName("select");
-	alert(cgrades);
-	alert("length =" + cgrades.length);
+	//alert(cgrades);
+	//alert("length =" + cgrades.length);
         for(var i=0; i < cgrades.length; i++) {
 		//alert("val = " + cgrades[i].value);
 		var cgrade_val = parseFloat(cgrades[i].value);
@@ -110,7 +110,9 @@ ul.posts li {
   function addNewSemester() {
 	alert("Add");	  
 	var div_main = document.getElementById("main_body");
+        alert("div_main" + div_main)   	  
 	var div_s1 = div_main.getElementById("div_smstr1");
+        alert("div_s1" + div_s1)   	  
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
 	  alert("clone = " + clone);
         clone.id = "div_smstr2";
@@ -245,7 +247,6 @@ ul.posts li {
         </p> 
 		
         <input type="submit" name="cgrade" onclick="calculate()" />
-	<button text="Calculate" onnclick="calculate()" >Calculate</button>
         <button text="Add New Semester" onclick="addNewSemester()" >Add New Semester</button>
 
 	<!-- </form> -->
