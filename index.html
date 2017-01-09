@@ -82,7 +82,6 @@ ul.posts li {
 		// Get id of cunit of each row. Convention, in case, cgrade_id = cgrade1, cunit_id = cunit1  
 		var cgrade_id  = cgrades[i].id
                 var cunit_id = cgrade_id.replace("grade", "unit");		
-		alert("id=" + cunit_id);
 	
 		var cunit  = document.getElementById(cunit_id);
 		if(!cunit) {
