@@ -60,7 +60,7 @@ ul.posts li {
 	padding: 5px;
 	background-color:#4CAF50;
 	color:white;
-	font-size: 150%;
+	font-size: 130%;
         font-family: Arial, Helvetica, sans-serif;
 }	
 
@@ -122,8 +122,8 @@ ul.posts li {
 	gpa = grade_point_total / unit_total;
 	var cunit_total = document.getElementById("cunit_total");
 	var cgpa = document.getElementById("cgpa");
-	cunit_total.textContent = unit_total;
-        cgpa.textContent = gpa;
+	cunit_total.textContent = "Total Units : " + unit_total;
+        cgpa.textContent = "Cumulative GPA : " + gpa;
   }	
 	
   function addNewSemester() {
