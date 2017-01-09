@@ -117,11 +117,12 @@ ul.posts li {
 	var div_s1 = div_main.firstElementChild;
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
         clone.id = "div_smstr2";
-	updateIdsInClonedSection(clone,semester);
+//	updateIdsInClonedSection(clone,semester);
 	  
         div_main.appendChild(clone);						    
   }	  
 
+/**	
   function updateIdsInClonedSection(var cloned, var semester) {
 	alert("clonded = " + cloned);  
 	if(cloned.id && cloned.id.endsWith("_s1")) {
@@ -139,7 +140,7 @@ ul.posts li {
 		updateIdsInClonedSection(cloned.children[i], semester);	
 	}  
   }
-	
+**/	
   function pageLoaded() {
 	// alert(window.location.search);	  
   }	  
