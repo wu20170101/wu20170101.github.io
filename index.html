@@ -132,7 +132,8 @@ ul.posts li {
  		var smstr_count_val = parseInt(smstr_count.value);
                 alert(smstr_count_val);
  		if(!isNaN(smstr_count_val)) {
-			var newSemester = smstr_count_val++;
+			var newSemester = ++smstr_count_val;
+                        alert(newSemester);
  			smstr_count.value = newSemester;
  			return newSemester;
  		}        			
