@@ -128,6 +128,8 @@ ul.posts li {
 	alert("clonded.id = " + cloned.id);  
         var newIdSuffix = "_s" + semester;
 	alert("newIdSuffix = " + newIdSuffix);  
+	var matched = cloned.id.endsWith("_s1");
+	alert("matched = " + matched);  
 	  
         if(cloned.id && cloned.id.endsWith("_s1")) {
 //           	clone.id = cloned.id.replace("_s1", "_s" + semester);
