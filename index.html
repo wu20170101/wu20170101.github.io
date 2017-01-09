@@ -7,6 +7,18 @@ body {
     background-color : white;
     width: 70%;
 }
+h1 {
+    font-size: 2em;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+}
+	
+/**	
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
@@ -24,16 +36,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-h1 {
-    font-size: 2em;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -47,7 +49,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
+**/
 .section_contents {
 	font-size: 100%;
         font-family: Arial, Helvetica, sans-serif;
@@ -58,6 +60,13 @@ ul.posts li {
 	color:white;
 	font-size: 150%;
         font-family: Arial, Helvetica, sans-serif;
+}	
+
+.section_footer {
+        font-size: 150%;
+        font-family: Arial, Helvetica, sans-serif;
+}	
+
 }	
 	
 </style>
@@ -280,15 +289,14 @@ ul.posts li {
 
 	</div> 
 	</div> 
-        <BR>
-	<div id="footer">		
+	<div id="footer" class = "section_footer" >		
 	<!--<p id="cresult"> 
         Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> <BR>
         GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
         </p> -->
         Total Unit : <BR>
-               GPA : 
-        <BR>		
+               GPA : <BR>
+       		
         <input type="hidden" name="smstr_count" id="smstr_count" value="1"  /></td>
         <input type="submit" name="cgrade" onclick="calculate()" />
         <button text="Add New Semester" onclick="addNewSemester()" >Add New Semester</button>
