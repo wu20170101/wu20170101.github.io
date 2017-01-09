@@ -127,9 +127,11 @@ ul.posts li {
 
   function getNewSemesterNumber() {
 	var smstr_count = document.getElementById("smstr_count");
+        alert(smstr_count);
 	if(!smstr_count) {
 		var smstr_count_val = parseInt(smstr_count);
-		if(!isNaN(cunit_val)) {
+                alert(smstr_count_val);
+		if(!isNaN(smstr_count_val)) {
 			smstr_count.value = smstr_count_val++;
 			return smstr_count.value ;
 		}        			
