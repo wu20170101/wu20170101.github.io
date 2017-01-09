@@ -111,7 +111,7 @@ ul.posts li {
 	alert("Add");	  
 	var div_main = document.getElementById("main_body");
         alert("div_main" + div_main)   	  
-	var div_s1 = div_main.getElementById("div_smstr1");
+	var div_s1 = div_main.firstElementChild();
         alert("div_s1" + div_s1)   	  
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
 	  alert("clone = " + clone);
