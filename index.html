@@ -125,6 +125,7 @@ ul.posts li {
 
   function updateIdsInClonedSection(cloned, semester) {
 	alert("clonded = " + cloned);  
+	alert("clonded.id = " + cloned.id);  
 
         if(cloned.id && cloned.id.endsWith("_s1")) {
            	clone.id = cloned.id.replace("_s1", "_s" + semester);
@@ -136,6 +137,8 @@ ul.posts li {
 		// no children 
         	return;
 	}
+
+	alert("123");  
 	  
         for(var i=0; i < cloned.children.length; i++) {
 		updateIdsInClonedSection(cloned.children[i], semester);	
