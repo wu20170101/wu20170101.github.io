@@ -124,26 +124,23 @@ ul.posts li {
 
 
   function updateIdsInClonedSection(cloned, semester) {
-	alert("clonded = " + cloned);  
-	alert("clonded.id = " + cloned.id);  
-        var newIdSuffix = "_s" + semester;
-	alert("newIdSuffix = " + newIdSuffix);  
-	var matched = cloned.id.endsWith("_s1");
-	alert("matched = " + matched);  
+//	alert("clonded = " + cloned);  
+//	alert("clonded.id = " + cloned.id);  
+//      var newIdSuffix = "_s" + semester;
+//	alert("newIdSuffix = " + newIdSuffix);  
+//	var matched = cloned.id.endsWith("_s1");
+//	alert("matched = " + matched);  
 	  
         if(cloned.id && cloned.id.endsWith("_s1")) {
-//           	clone.id = cloned.id.replace("_s1", "_s" + semester);
+           	clone.id = cloned.id.replace("_s1", "_s" + semester);
 	        alert("updated = " + cloned.id);   
         }   
-	alert("456");  
 	  
 	var children = cloned.children;
 	if(!children || children.length ==0) {
 		// no children 
         	return;
 	}
-
-	alert("123");  
 	  
         for(var i=0; i < cloned.children.length; i++) {
 		updateIdsInClonedSection(cloned.children[i], semester);	
