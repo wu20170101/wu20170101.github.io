@@ -82,7 +82,7 @@ ul.posts li {
 		// Get id of cunit of each row. Convention, in case, cgrade_id = cgrade1, cunit_id = cunit1  
 		var cgrade_id  = cgrades[i].id
                 var cunit_id = cgrade_id.replace("grade", "unit");		
-		//alert("id=" + cunit_id);
+		alert("id=" + cunit_id);
 	
 		var cunit  = document.getElementById(cunit_id);
 		if(!cunit) {
@@ -108,24 +108,36 @@ ul.posts li {
   }	
 	
   function addNewSemester() {
-	alert("Add");	  
+	var semester = 2;  
 	var div_main = document.getElementById("main_body");
-        alert("div_main" + div_main)   	  
-        alert("div_main chidren : " + div_main.children)   	  
-        alert("div_main fiist  : " + div_main.firstElementChild)   	  
-        for(var i=0; i < div_main.children.length; i++) {
-	   alert(i + " : " + div_main.children[i].id);  
-	}  
+        //alert("div_main" + div_main)   	  
+        //for(var i=0; i < div_main.children.length; i++) {
+	//   alert(i + " : " + div_main.children[i].id);  
+	//}  
 	var div_s1 = div_main.firstElementChild;
-        alert("div_s1 : " + div_s1)   	  
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
-        alert("clone = " + clone);
         clone.id = "div_smstr2";
+	updateIdsInClonedSection(clone,semester);
 	  
         div_main.appendChild(clone);						    
-
   }	  
-	
+
+  function updateIdsInClonedSection(var cloned, var semester) {
+	if(cloned.id && cloned.id.endsWith("_s1") {
+           	clone.id = cloned.id.replace("_s1", "_s" + semester);
+	        alsert("updated = " + clone.id);   
+        }   
+	  
+	var children = cloned.children;
+	if(!children || children.length ==0) {
+		// no children 
+        	return;
+	}
+	  
+        for(var i=0; i < cloned.children.length; i++) {
+		updateIdsInClonedSection(cloned.children[i], semester);	
+	}  
+  }
 	
   function pageLoaded() {
 	// alert(window.location.search);	  
@@ -145,16 +157,16 @@ ul.posts li {
         
 	<div id="div_smstr1">
 
-        <div class="section_header" id"div_header" >&nbsp Semester 1 </div> 
-	<div class="section_contents" id"div_contents" > 
+        <div class="section_header" id="div_hd_s1" >&nbsp Semester 1 </div> 
+	<div class="section_contents"> 
 	<table style="width:70%" >
           <tr>
-            <td><input type="text" name="cname" id="cname1" size="40" placeholder="Course, e.g. cs61a" /></td>
-  	    <td><label for "cunit1" >Unit</label></td>
-	    <td><input type="text" name="cunit" id="cunit1" value="4" size="10" /></td>
-  	    <td><label for "cgrade1" >Grade</label></td>
+            <td><input type="text" name="cname" id="cname1_s1" size="40" placeholder="Course, e.g. cs61a" /></td>
+  	    <td><label for "cunit1_s1" >Unit</label></td>
+	    <td><input type="text" name="cunit" id="cunit1_s1" value="4" size="10" /></td>
+  	    <td><label for "cgrade1_s1" >Grade</label></td>
   	    <td>
-		<select name="cgrade" id="cgrade1">
+		<select name="cgrade" id="cgrade1_s1">
   		<option value="">-</option>
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
@@ -172,12 +184,12 @@ ul.posts li {
             </td>		    
           </tr>
           <tr>
-            <td><input type="text" name="cname" id="cname2" size="40" placeholder="Course, e.g. cs61a" /></td>
-  	    <td><label for "cunit2" >Unit</label></td>
-	    <td><input type="text" name="cunit" id="cunit2" value="4" size="10" /></td>
-  	    <td><label for "cgrade2" >Grade</label></td>
+            <td><input type="text" name="cname" id="cname2_s2" size="40" placeholder="Course, e.g. cs61a" /></td>
+  	    <td><label for "cunit2_s2" >Unit</label></td>
+	    <td><input type="text" name="cunit" id="cunit2_s2" value="4" size="10" /></td>
+  	    <td><label for "cgrade2_s2" >Grade</label></td>
   	    <td>
-		<select name="cgrade" id="cgrade2">
+		<select name="cgrade" id="cgrade2_s2">
   		<option value="">-</option>
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
@@ -195,12 +207,12 @@ ul.posts li {
             </td>		    
           </tr>
           <tr>
-            <td><input type="text" name="cname" id="cname3" size="40" placeholder="Course, e.g. cs61a" /></td>
-  	    <td><label for "cunit3" >Unit</label></td>
-	    <td><input type="text" name="cunit" id="cunit3" value="4" size="10" /></td>
-  	    <td><label for "cgrade3" >Grade</label></td>
+            <td><input type="text" name="cname" id="cname3_s3" size="40" placeholder="Course, e.g. cs61a" /></td>
+  	    <td><label for "cunit3_s3" >Unit</label></td>
+	    <td><input type="text" name="cunit" id="cunit3_s3" value="4" size="10" /></td>
+  	    <td><label for "cgrade3_s3" >Grade</label></td>
   	    <td>
-		<select name="cgrade" id="cgrade3">
+		<select name="cgrade" id="cgrade3_s3">
   		<option value="">-</option>
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
@@ -218,12 +230,12 @@ ul.posts li {
             </td>		    
           </tr>
           <tr>
-            <td><input type="text" name="cname" id="cname4" size="40" placeholder="Course, e.g. cs61a" /></td>
-  	    <td><label for "cunit4" >Unit</label></td>
-	    <td><input type="text" name="cunit" id="cunit4" value="4" size="10" /></td>
-  	    <td><label for "cgrade4" >Grade</label></td>
+            <td><input type="text" name="cname" id="cname4_s4" size="40" placeholder="Course, e.g. cs61a" /></td>
+  	    <td><label for "cunit4_s4" >Unit</label></td>
+	    <td><input type="text" name="cunit" id="cunit4_s4" value="4" size="10" /></td>
+  	    <td><label for "cgrade4_s4" >Grade</label></td>
   	    <td>
-		<select name="cgrade" id="cgrade4">
+		<select name="cgrade" id="cgrade4_s4">
   		<option value="">-</option>
   		<option value="4.0">A</option>
   		<option value="3.7">A-</option>
