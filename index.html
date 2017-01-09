@@ -123,9 +123,9 @@ ul.posts li {
         }	  
 	gpa = grade_point_total / unit_total;
 	var cunit_total = document.getElementById("cunit_total");
-	var cgpa = document.getElementById("cgpi");
-        cunit_total.value = unit_total;
-        cgpa.value = gpa;
+	var cgpa = document.getElementById("cgpa");
+	cunit_total.textContent = unit_total;
+        cgpa.textContent = gpa;
   }	
 	
   function addNewSemester() {
