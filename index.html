@@ -113,10 +113,13 @@ ul.posts li {
         alert("div_main" + div_main)   	  
         alert("div_main chidren : " + div_main.children)   	  
         alert("div_main fiist  : " + div_main.firstElementChild)   	  
+        for(var i=0; i < div_main.children.length; i++) {
+	   alert(i + " : " + div_main.children[i]);  
+	}  
 	var div_s1 = div_main.firstElementChild;
         alert("div_s1 : " + div_s1)   	  
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
-	  alert("clone = " + clone);
+        alert("clone = " + clone);
         clone.id = "div_smstr2";
         div_main.appendChild(clone);						    
 
