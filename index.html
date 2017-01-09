@@ -117,19 +117,25 @@ ul.posts li {
 	var div_s1 = div_main.firstElementChild;
         var clone = div_s1.cloneNode(true); // true means clone all childNodes and all event handlers
         clone.id = "div_smstr2";
-	updateIdsInClonedSection(clone,semester);
+	 
+	// update ids in cloned section with proper suffix = "_s<sememster#>"
+        updateIdsInClonedSection(clone,semester);
 	  
         div_main.appendChild(clone);						    
   }	  
 
 
   function updateIdsInClonedSection(cloned, semester) {
-//	alert("clonded = " + cloned);  
-//	alert("clonded.id = " + cloned.id);  
-//      var newIdSuffix = "_s" + semester;
-//	alert("newIdSuffix = " + newIdSuffix);  
-//	var matched = cloned.id.endsWith("_s1");
-//	alert("matched = " + matched);  
+	//	alert("clonded = " + cloned);  
+	//	alert("clonded.id = " + cloned.id);  
+	//      var newIdSuffix = "_s" + semester;
+	//	alert("newIdSuffix = " + newIdSuffix);  
+	//	var matched = cloned.id.endsWith("_s1");
+	//	alert("matched = " + matched);  
+	
+	if(cloned.id && cloned.id == "div_hd_s1") {
+		cloned.textContent = "Sememster " + semester;
+	}	
 	  
         if(cloned.id && cloned.id.endsWith("_s1")) {
            	cloned.id = cloned.id.replace("_s1", "_s" + semester);
