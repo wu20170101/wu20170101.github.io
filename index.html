@@ -108,7 +108,8 @@ ul.posts li {
   }	
 	
   function addNewSemester() {
-	var semester = 2;  
+	  
+	var semester = getNewSemesterNumber();  
 	var div_main = document.getElementById("main_body");
         //alert("div_main" + div_main)   	  
         //for(var i=0; i < div_main.children.length; i++) {
@@ -124,6 +125,17 @@ ul.posts li {
         div_main.appendChild(clone);						    
   }	  
 
+  function getNewSemesterNumber() {
+	var smstr_count = document.getElementById("smstr_count");
+	if(!smstr_count) {
+		var smstr_count_val = parseInt(smstr_count);
+		if(!isNaN(cunit_val)) {
+			smstr_count.value = smstr_count_val++;
+			return smstr_count.value ;
+		}        			
+	}		
+	return 1;	  
+  }	  
 
   function updateIdsInClonedSection(cloned, semester) {
 	//	alert("clonded = " + cloned);  
@@ -279,6 +291,7 @@ ul.posts li {
         Total Unit : <input type="text" name="cunit_total" readonly="true" id="cunit_total" /> <BR>
         GPA : <input type="text" name="cgpa" readonly="true" id="cgpi" />
         </p> 
+        <input type="hidden" name="smstr_count" id="smstr_count" value="1"  /></td>
         <input type="submit" name="cgrade" onclick="calculate()" />
         <button text="Add New Semester" onclick="addNewSemester()" >Add New Semester</button>
 	</div>		
