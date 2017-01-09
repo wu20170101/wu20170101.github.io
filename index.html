@@ -128,30 +128,25 @@ ul.posts li {
   function getNewSemesterNumber() {
 	var smstr_count = document.getElementById("smstr_count");
         alert(smstr_count);
-	if(!smstr_count) {
-		var smstr_count_val = parseInt(smstr_count);
-                alert(smstr_count_val);
-		if(!isNaN(smstr_count_val)) {
-			smstr_count.value = smstr_count_val++;
-			return smstr_count.value ;
-		}        			
-	}		
+// 	if(!smstr_count) {
+// 		var smstr_count_val = parseInt(smstr_count);
+//                 alert(smstr_count_val);
+// 		if(!isNaN(smstr_count_val)) {
+// 			smstr_count.value = smstr_count_val++;
+// 			return smstr_count.value ;
+// 		}        			
+// 	}		
 	return 1;	  
   }	  
 
   function updateIdsInClonedSection(cloned, semester) {
-	//	alert("clonded = " + cloned);  
-	//	alert("clonded.id = " + cloned.id);  
-	//      var newIdSuffix = "_s" + semester;
-	//	alert("newIdSuffix = " + newIdSuffix);  
-	//	var matched = cloned.id.endsWith("_s1");
-	//	alert("matched = " + matched);  
-	
 	if(cloned.id && cloned.id == "div_hd_s1") {
+		// Update the Semester Header  
 		cloned.textContent = "Sememster " + semester;
 	}	
 	  
         if(cloned.id && cloned.id.endsWith("_s1")) {
+		// Update id of grade and unit fields  
            	cloned.id = cloned.id.replace("_s1", "_s" + semester);
 	        alert("updated = " + cloned.id);   
         }   
